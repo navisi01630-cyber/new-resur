@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Revolution Bangladesh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #047857;
+            --primary-dark: #065f46;
+            --secondary: #059669;
+            --light: #ecfdf5;
+            --dark: #064e3b;
+            --gray: #4b5563;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9fafb;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo i {
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(4, 120, 87, 0.9), rgba(4, 120, 87, 0.8));
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23047857" opacity="0.8"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23065f46" stroke-width="0.5"/></svg>');
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+        }
+
+        /* Calculator Section */
+        .calculator {
+            background-color: var(--light-gray);
+        }
+
+        .calculator-container {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 10px;
+            -webkit-appearance: none;
+            background: var(--light-gray);
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .value-display {
+            font-weight: 600;
+            color: var(--primary);
+            display: block;
+            margin-top: 10px;
+        }
+
+        .results {
+            margin-top: 40px;
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .result-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Report Section */
+        .report {
+            background-color: var(--white);
+        }
+
+        .report-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .report-text {
+            flex: 1;
+        }
+
+        .report-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background-color: #e0f2f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .report-image i {
+            font-size: 120px;
+            color: var(--primary);
+            opacity: 0.7;
+        }
+
+        /* Creative Recycling Section */
+        .creative {
+            background-color: var(--light);
+        }
+
+        .creative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .creative-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .creative-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .creative-image {
+            height: 200px;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .creative-image i {
+            font-size: 80px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .creative-content {
+            padding: 20px;
+        }
+
+        .creative-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Resources Section */
+        .resources {
+            background-color: var(--white);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            padding: 30px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .resource-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .resource-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #d1d5db;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .report-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                box-shadow: var(--shadow);
+            }
+            
+            nav.active ul {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-recycle"></i>
+                <span>RecyclingRevolutionBD</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#information">Information Hub</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#creative">Creative Recycling</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Recycling Revolution Bangladesh</h1>
+            <p>Transforming waste into resources for a sustainable future</p>
+            <div class="hero-btns">
+                <a href="#calculator" class="btn">Calculate Waste Impact</a>
+                <a href="#report" class="btn btn-outline">Read Our Report</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="information">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recycling Information Hub</h2>
+                <p>Your comprehensive resource for recycling knowledge in Bangladesh</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Recycling News</h3>
+                    <p>Latest updates on recycling initiatives across Bangladesh</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Recycling Basics</h3>
+                    <p>Fundamentals of recycling and its environmental importance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Social Impact</h3>
+                    <p>How recycling affects our society and environment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Creative Recycling</h3>
+                    <p>Innovative ways to transform waste into valuable products</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Quantifying Needs</h3>
+                    <p>Data-driven analysis of recycling requirements</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Resource Directory</h3>
+                    <p>Tools, machines, and recycling facilities database</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Recycling Report</h3>
+                    <p>Comprehensive analysis of current recycling landscape</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Waste Calculator</h3>
+                    <p>Estimate waste generation and management needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25,000+</div>
+                    <div class="stat-label">Tons of Waste Daily</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">28%</div>
+                    <div class="stat-label">Recycling Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100,000+</div>
+                    <div class="stat-label">Waste Workers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5,400+</div>
+                    <div class="stat-label">Recycling Jobs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction to Recycling -->
+    <section class="report" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Introduction to Recycling</h2>
+                <p>Understanding the importance of recycling in Bangladesh</p>
+            </div>
+            <div class="report-content">
+                <div class="report-text">
+                    <h3>Why Recycling Matters</h3>
+                    <p>Recycling is the process of converting waste materials into reusable objects to prevent waste of potentially useful materials. In Bangladesh, with rapid urbanization and population growth, recycling has become critical due to limited landfill space and environmental concerns.</p>
+                    
+                    <h3>Key Benefits of Recycling</h3>
+                    <ul>
+                        <li><strong>Environmental Protection:</strong> Reduces pollution and conserves natural resources</li>
+                        <li><strong>Energy Conservation:</strong> Uses less energy than producing new products from raw materials</li>
+                        <li><strong>Economic Value:</strong> Creates jobs and generates revenue from waste materials</li>
+                        <li><strong>Public Health:</strong> Reduces disease vectors and contamination risks</li>
+                        <li><strong>Sustainability:</strong> Preserves resources for future generations</li>
+                    </ul>
+                    
+                    <p>With over 25,000 tonnes of solid waste generated daily in Bangladesh, recycling conserves resources, reduces pollution, and creates economic opportunities. Scaling recycling could supply 75% of factory plastic needs, earning Tk 7 billion ($67M) annually in foreign exchange.</p>
+                    
+                    <a href="#" class="btn" style="margin-top: 20px;">Learn More About Recycling</a>
+                </div>
+                <div class="report-image">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact of Recycling -->
+    <section class="creative" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Impact of Recycling on Society</h2>
+                <p>How recycling transforms communities and the environment</p>
+            </div>
+            
+            <div class="report-content">
+                <div class="report-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="report-text">
+                    <h3>Positive Impacts</h3>
+                    <ul>
+                        <li><strong>Poverty Reduction:</strong> Waste pickers increase earnings 25-50% with proper equipment</li>
+                        <li><strong>Health Improvements:</strong> Proper waste management reduces disease risks</li>
+                        <li><strong>Women's Empowerment:</strong> 70% of textile sorters are women with fair wages</li>
+                        <li><strong>Job Creation:</strong> Recycling employs 5,400+ in plastics alone</li>
+                        <li><strong>Resource Conservation:</strong> Reduces need for raw material extraction</li>
+                    </ul>
+                    
+                    <h3>Challenges to Address</h3>
+                    <ul>
+                        <li><strong>Informal Sector:</strong> Many workers lack safety equipment and fair wages</li>
+                        <li><strong>Health Hazards:</strong> Exposure to toxins and unsafe working conditions</li>
+                        <li><strong>Infrastructure Gaps:</strong> Limited recycling facilities and technology</li>
+                        <li><strong>Policy Enforcement:</strong> Weak implementation of environmental regulations</li>
+                        <li><strong>Awareness:</strong> Limited public knowledge about proper recycling practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Recycling -->
+    <section class="creative" id="creative">
+        <div class="container">
+            <div class="section-title">
+                <h2>Creative Recycling Innovations</h2>
+                <p>Transforming waste into valuable products</p>
+            </div>
+            
+            <div class="creative-grid">
+                <div class="creative-card">
+                    <div class="creative-image">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="creative-content">
+                        <h3>Plastic Roads</h3>
+                        <p>Mixing plastic waste with asphalt to create durable, cost-effective roads. Each km uses 1.5 tonnes of plastic waste.</p>
+                    </div>
+                </div>
+                
+                <div class="creative-card">
+                    <div class="creative-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="creative-content">
+                        <h3>Recycled Textiles</h3>
+                        <p>Transforming textile waste into new fabrics and clothing items. Bangladesh recycles 28% of its textile waste.</p>
+                    </div>
+                </div>
+                
+                <div class="creative-card">
+                    <div class="creative-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="creative-content">
+                        <h3>Eco-Bricks</h3>
+                        <p>Plastic bottles filled with non-recyclable plastic used as building materials for low-cost housing.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 60px;">
+                <h2>Quantifying Recycling Needs</h2>
+                <p>Material requirements for recycled products</p>
+            </div>
+            
+            <div class="calculator-container" style="max-width: 100%;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: var(--primary); color: white;">
+                            <th style="padding: 15px; text-align: left;">Product</th>
+                            <th style="padding: 15px; text-align: left;">Input Material</th>
+                            <th style="padding: 15px; text-align: left;">Quantity Needed</th>
+                            <th style="padding: 15px; text-align: left;">Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--light-gray);">
+                            <td style="padding: 15px;">Organic Compost</td>
+                            <td style="padding: 15px;">Food/green waste</td>
+                            <td style="padding: 15px;">1 tonne</td>
+                            <td style="padding: 15px;">400 kg compost</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--light-gray);">
+                            <td style="padding: 15px;">Recycled Plastic Road</td>
+                            <td style="padding: 15px;">Mixed plastics</td>
+                            <td style="padding: 15px;">1.5 tonnes/km</td>
+                            <td style="padding: 15px;">1 km durable asphalt</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--light-gray);">
+                            <td style="padding: 15px;">PET Fabric</td>
+                            <td style="padding: 15px;">Plastic bottles</td>
+                            <td style="padding: 15px;">27 bottles = 1 kg fiber</td>
+                            <td style="padding: 15px;">1 T-shirt</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px;">Steel from Ships</td>
+                            <td style="padding: 15px;">Scrap ships</td>
+                            <td style="padding: 15px;">1 ship = 20,000 tonnes</td>
+                            <td style="padding: 15px;">18,000 tonnes re-rolled steel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trash Management Calculator</h2>
+                <p>Estimate Bangladesh's daily waste footprint</p>
+            </div>
+            <div class="calculator-container">
+                <form class="calculator-form" id="trashCalculator">
+                    <div class="form-group">
+                        <label for="population">Population (millions):</label>
+                        <input type="range" id="population" min="1" max="200" value="169">
+                        <span class="value-display" id="popValue">169</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="wastePerCapita">Waste per Person (kg/day):</label>
+                        <input type="range" id="wastePerCapita" min="0.1" max="2" step="0.1" value="0.5">
+                        <span class="value-display" id="wasteValue">0.5</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recycleRate">Recycling Rate (%):</label>
+                        <input type="range" id="recycleRate" min="0" max="100" value="28">
+                        <span class="value-display" id="recycleValue">28</span>
+                    </div>
+                    
+                    <button type="button" class="btn" id="calculateBtn">Calculate</button>
+                </form>
+                
+                <div class="results" id="results">
+                    <h3>Results:</h3>
+                    <div class="result-item">Total Daily Waste: <span class="result-value" id="totalWaste">84,500</span> tonnes</div>
+                    <div class="result-item">Recyclable Material: <span class="result-value" id="recyclable">23,660</span> tonnes</div>
+                    <div class="result-item">Landfill Waste: <span class="result-value" id="landfill">60,840</span> tonnes</div>
+                    <div class="result-item">Lost Economic Value: $<span class="result-value" id="economicLoss">3.2</span> million/day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resource Directory</h2>
+                <p>Tools, machines, and recycling facilities in Bangladesh</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3><i class="fas fa-cogs"></i> Recycling Machines</h3>
+                    <p>Available technologies and equipment for waste processing:</p>
+                    <ul>
+                        <li><strong>Plastic Shredders:</strong> $3,000–$8,000</li>
+                        <li><strong>Pyrolysis Units:</strong> $50,000–$200,000</li>
+                        <li><strong>Compost Tumblers:</strong> $500–$2,000</li>
+                        <li><strong>Baling Machines:</strong> $10,000–$50,000</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-building"></i> Recycling Facilities</h3>
+                    <p>Major recycling centers in Bangladesh:</p>
+                    <ul>
+                        <li>Waste Concern Composting (Dhaka)</li>
+                        <li>Cordaid Plastic Recycling (Narayanganj)</li>
+                        <li>Broadway Regenerated Fiber (Savar)</li>
+                        <li>BSCIC Industrial Park Recycling Center</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-book"></i> Educational Resources</h3>
+                    <p>Learning materials and guides:</p>
+                    <ul>
+                        <li>National 3R Strategy Document</li>
+                        <li>Solid Waste Management Rules 2021</li>
+                        <li>Recycling Business Start-up Guide</li>
+                        <li>Community Recycling Handbook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Section -->
+    <section class="report" id="report">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bangladesh Recycling Report</h2>
+                <p>Current status, challenges, and opportunities</p>
+            </div>
+            <div class="report-content">
+                <div class="report-text">
+                    <h3>Current Challenges</h3>
+                    <ul>
+                        <li><strong>Waste Volume:</strong> Urban areas generate 25,000–30,000 tonnes daily</li>
+                        <li><strong>Collection Gaps:</strong> Only 45–50% of urban waste formally collected</li>
+                        <li><strong>Landfill Overload:</strong> Dhaka's landfills exhausted, contaminating water</li>
+                        <li><strong>Textile Waste:</strong> Apparel sector generates 577,000 tonnes/year</li>
+                        <li><strong>Informal Labor:</strong> ~100,000 waste pickers without safety gear</li>
+                    </ul>
+                    
+                    <h3>Progress & Initiatives</h3>
+                    <ul>
+                        <li><strong>Policy Advances:</strong> National 3R Strategy, Solid Waste Management Rules 2021</li>
+                        <li><strong>Community Projects:</strong> Waste Concern composting diverts 130 tonnes/day</li>
+                        <li><strong>Training Programs:</strong> Cordaid trained 500+ waste workers</li>
+                        <li><strong>Entrepreneurship:</strong> Support for 65,000+ microenterprises</li>
+                    </ul>
+                    
+                    <h3>Future Prospects</h3>
+                    <ul>
+                        <li>Scaling could supply 75% of factory plastic needs</li>
+                        <li>Potential to earn Tk 7 billion ($67M) annually</li>
+                        <li>New EU regulations creating export opportunities</li>
+                        <li>Investment in chemical recycling and pyrolysis tech</li>
+                    </ul>
+                    
+                    <a href="#" class="btn" style="margin-top: 20px;">Download Full Report</a>
+                </div>
+                <div class="report-image">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Recycling Revolution BD</h3>
+                    <p>Promoting sustainable recycling practices and waste management solutions across Bangladesh through education, innovation, and community engagement.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#information">Information Hub</a></li>
+                        <li><a href="#impact">Impact on Society</a></li>
+                        <li><a href="#creative">Creative Recycling</a></li>
+                        <li><a href="#calculator">Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Recycling Guidelines</a></li>
+                        <li><a href="#">Waste Management Tools</a></li>
+                        <li><a href="#">Educational Materials</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policy Documents</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</li>
+                        <li><i class="fas fa-phone"></i> +880 1234 567890</li>
+                        <li><i class="fas fa-envelope"></i> info@recyclingrevolutionbd.org</li>
+                        <li><i class="fas fa-globe"></i> www.recyclingrevolutionbd.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Recycling Revolution Bangladesh. All rights reserved. | Project Owner: Md Minhajul Malik</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Slider value displays
+        const populationSlider = document.getElementById('population');
+        const wasteSlider = document.getElementById('wastePerCapita');
+        const recycleSlider = document.getElementById('recycleRate');
+        const popValue = document.getElementById('popValue');
+        const wasteValue = document.getElementById('wasteValue');
+        const recycleValue = document.getElementById('recycleValue');
+        
+        populationSlider.addEventListener('input', () => {
+            popValue.textContent = populationSlider.value;
+        });
+        
+        wasteSlider.addEventListener('input', () => {
+            wasteValue.textContent = wasteSlider.value;
+        });
+        
+        recycleSlider.addEventListener('input', () => {
+            recycleValue.textContent = recycleSlider.value;
+        });
+        
+        // Calculator function
+        const calculateBtn = document.getElementById('calculateBtn');
+        const totalWasteEl = document.getElementById('totalWaste');
+        const recyclableEl = document.getElementById('recyclable');
+        const landfillEl = document.getElementById('landfill');
+        const economicLossEl = document.getElementById('economicLoss');
+        
+        calculateBtn.addEventListener('click', calculate);
+        
+        function calculate() {
+            const pop = parseFloat(populationSlider.value);
+            const waste = parseFloat(wasteSlider.value);
+            const recycleRate = parseFloat(recycleSlider.value);
+            
+            const totalWaste = (pop * 1000000 * waste) / 1000; // in tonnes
+            const recyclable = totalWaste * (recycleRate / 100);
+            const landfill = totalWaste - recyclable;
+            const economicLoss = (landfill * 52600) / 1000000; // $52.6/tonne lost
+            
+            totalWasteEl.textContent = totalWaste.toLocaleString(undefined, {maximumFractionDigits: 0});
+            recyclableEl.textContent = recyclable.toLocaleString(undefined, {maximumFractionDigits: 0});
+            landfillEl.textContent = landfill.toLocaleString(undefined, {maximumFractionDigits: 0});
+            economicLossEl.textContent = economicLoss.toFixed(1);
+        }
+        
+        // Initialize calculator
+        calculate();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
